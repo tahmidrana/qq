@@ -23,7 +23,7 @@
 						<div class="profile-image">
 							<img src="<?php echo $get_user_row['prof_pic']; ?>" alt="">
 							<p class=""><a href=""><?php echo $get_user_row['name']; ?></a></p>
-							<span style="color: green;margin-top: 0;">ameture</span>
+							<span style="color: green;margin-top: 0;"></span>
 						</div>
 					</div>
 					<div class="col-md-10">
@@ -87,7 +87,7 @@
 				
 			
 			</div>
-			<div class="row">
+			<!-- <div class="row">
 				<div class="col-md-6">
 					<div class="answers">
 						<h1><span style="color: #ccc; margin-right: 10px;">52</span>Tags</h1>
@@ -116,7 +116,7 @@
 						</div>
 					</div>
 				</div>
-			</div>
+			</div> -->
 		</div>
 	</div>
 </div>

@@ -20,7 +20,7 @@
 						<div class="profile-image">
 							<img src="<?php echo $get_user_row['prof_pic']; ?>" alt="">
 							<p class=""><a href=""><?php echo $get_user_row['name']; ?></a></p>
-							<span style="color: green;margin-top: 0;">ameture</span>
+							<span style="color: green;margin-top: 0;"></span>
 						</div>
 					</div>
 					<div class="col-md-10">
@@ -66,6 +66,7 @@
 							if($ansList_res){
 								$ansList_num_row = $ansList_res->num_rows;
 							}
+							$i = 1;
 						?>
 						<h1><span style="color: #ccc; margin-right: 10px;"><?php echo $ansList_num_row; ?></span>Answers</h1>
 						<ul class="answer-list">
@@ -73,8 +74,8 @@
 								if($ansList_res):
 									while ($ansList_row = $ansList_res->fetch_assoc()):
 							?>
-							<li><span><?php echo $ansList_row['id']; ?></span><a class="" href="../singlePost.php?postid=<?php echo $ansList_row['question_id']; ?>" style="display: block; overflow: hidden; padding-left: 10px;"><?php echo $hlp->stringModify($ansList_row['ans_body']); ?></a></li>
-								<?php endwhile;  ?>
+							<li><span><?php echo $i; ?></span><a class="" href="../singlePost.php?postid=<?php echo $ansList_row['question_id']; ?>" style="display: block; overflow: hidden; padding-left: 10px;"><?php echo $hlp->stringModify($ansList_row['ans_body']); ?></a></li>
+								<?php $i++; endwhile;  ?>
 							<?php else: ?>
 								<li><h3>No Answers yet.</h3></li>
 							<?php endif; ?>
@@ -110,7 +111,7 @@
 				</div>
 			
 			</div>
-			<div class="row">
+			<!-- <div class="row">
 				<div class="col-md-6">
 					<div class="answers">
 						<h1><span style="color: #ccc; margin-right: 10px;">52</span>Tags</h1>
@@ -139,7 +140,7 @@
 						</div>
 					</div>
 				</div>
-			</div>
+			</div> -->
 		</div>
 	</div>
 </div>
